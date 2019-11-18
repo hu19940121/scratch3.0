@@ -1,0 +1,33 @@
+.player-wrapper{
+  position: fixed;
+  width: 720px;
+  height: 400px;
+  /* background-color: red; */
+  z-index: 999;
+}
+.cursor{
+  cursor: move;
+}
+.top-con{
+  display: flex;
+  justify-content: space-between;
+  height: 36px;
+  width: 100%;
+  box-sizing: border-box;
+  line-height: 36px;
+  padding:0 10px 0 20px;
+  color: #1890ff;
+  background-color: #eee;
+}
+.top-con-l{
+
+}
+.top-con-r span{
+  font-size: 26px;
+  padding-left: 10px;
+  cursor: pointer;
+}
+/* .player{
+  width: 100%;
+  height: 100%;
+} */

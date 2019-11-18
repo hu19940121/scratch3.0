@@ -1,0 +1,8 @@
+node_modules/*
+build/*
+dist/*
+src/components/menu-bar/*
+src/components/publish-modal/*
+src/components/video-player/*
+
+src/utils/*
