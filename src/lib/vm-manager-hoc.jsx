@@ -106,7 +106,8 @@ const vmManagerHOC = function (WrappedComponent) {
                             reader.onload = () =>
                                 this.props.vm.loadProject(reader.result)
                                     .then(() => {
-                                        this.props.onUpdateProjectTitle(uploadedProjectTitle);
+                                        // eslint-disable-next-line no-unused-expressions
+                                        !this.props.isPlayerOnly && this.props.onUpdateProjectTitle(uploadedProjectTitle);
                                         this.props.onLoadedProject(this.props.loadingState, this.props.canSave);
                                         setTimeout(() => this.props.onSetProjectUnchanged());
                                         if (!this.props.isStarted) {
@@ -194,8 +195,7 @@ const vmManagerHOC = function (WrappedComponent) {
         projectData: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
         projectId: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
         username: PropTypes.string,
-        vm: PropTypes.instanceOf(VM).isRequired,
-        workId: PropTypes.string
+        vm: PropTypes.instanceOf(VM).isRequired
     };
 
     const mapStateToProps = state => {

@@ -103,7 +103,6 @@ class GUI extends React.Component {
             children,
             fetchingProject,
             isLoading,
-            // workId,
             loadingStateVisible,
             ...componentProps
         } = this.props;
@@ -115,7 +114,6 @@ class GUI extends React.Component {
             //     {children}
             // </GUIComponent>
             <GUIComponent
-                // workId={workId}
                 loading={fetchingProject || isLoading || loadingStateVisible}
                 {...componentProps}
             >
@@ -126,7 +124,6 @@ class GUI extends React.Component {
 }
 
 GUI.propTypes = {
-    // workId: PropTypes.string,
     assetHost: PropTypes.string,
     children: PropTypes.node,
     cloudHost: PropTypes.string,

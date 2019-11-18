@@ -56,7 +56,6 @@ let isRendererSupported = null;
 
 const GUIComponent = props => {
     const {
-        // workId,
         accountNavOpen,
         activeTabIndex,
         alertsVisible,
@@ -143,7 +142,6 @@ const GUIComponent = props => {
 
         return isPlayerOnly ? (
             <StageWrapper
-                // workId={workId}
                 isFullScreen={isFullScreen}
                 isRendererSupported={isRendererSupported}
                 isRtl={isRtl}

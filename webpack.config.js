@@ -18,11 +18,11 @@ const STATIC_PATH = process.env.STATIC_PATH || '/static';
 console.log(' process.env.NODE_ENV', process.env.NODE_ENV);
 
 const base = {
-    mode: 'production', 
-    devtool: false,
+    // mode: 'production', 
+    // devtool: false,
 
-    // mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
-    // devtool: 'cheap-module-source-map',
+    mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
+    devtool: 'cheap-module-source-map',
 
 
     devServer: {

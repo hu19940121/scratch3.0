@@ -24,7 +24,6 @@ const Player = ({isPlayerOnly, onSeeInside, projectId, isFullScreen}) => (
         {/* {isPlayerOnly && <button onClick={onSeeInside}>{'See inside'}</button>} */}
         <GUI
             isFullScreen={isFullScreen}
-            // workId={workId}
             enableCommunity
             isPlayerOnly={isPlayerOnly}
             projectId={projectId}
@@ -36,7 +35,6 @@ Player.propTypes = {
     isPlayerOnly: PropTypes.bool,
     onSeeInside: PropTypes.func,
     projectId: PropTypes.string,
-    // workId: PropTypes.string,
     isFullScreen: PropTypes.bool
 };
 
@@ -74,11 +72,7 @@ const WrappedPlayer = compose(
 )(ConnectedPlayer);
 const appTarget = document.createElement('div');
 document.body.appendChild(appTarget);
-// const workId = getQueryVariable('workId'); // 自己定义的workId //根据workid去下载sb3文件
-// console.log('workId', workId);
-
 ReactDOM.render(<WrappedPlayer
     isFullScreen
     isPlayerOnly
-    // workId={workId}
 />, appTarget);
